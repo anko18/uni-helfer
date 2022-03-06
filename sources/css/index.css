@@ -1,25 +1,14 @@
 .s-logo {
     width: 80px;
     height: 80px;
-    display: flex;
+    top: 0;
+    left: 0;
     margin-left: 14px;
-}
-
-.s-sukablyat {
-    margin-right: 14px;
-    color: #6B287C;
-    background-color: white;
-    border-radius: 8px;
-    transition-duration: 0.5s;
-}
-
-.s-sukablyat:hover {
-    background-color: #6B287C;
-  color: white;
+    position: absolute;
 }
 
 .s-link {
-    color: #6B287C;
+    color: #14213d;
     padding: 10px;
     margin: 10px;
     text-decoration: none;
@@ -27,7 +16,7 @@
  }
       
 .s-link:hover {
-    color: #6B287C;
+    color: #fca311;
 }
 
 .s-link::before{
@@ -38,7 +27,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #6B287C;
+    background-color: #fca311;
     transform: scaleX(0);
     transform-origin: top left;
     transition: transform 0.3s ease;
@@ -51,27 +40,36 @@
 
 body {
     font-family: monospace;
+    background-color: #faf9f9;
+}
+header {
+    background-color: #e5e5e5;
+    min-height: 80px;
 }
 
 td {
-    border: 1px solid #dddddd;
+    border: 1px solid #b1b1b1;
     text-align: center;
     padding: 8px;
-    color:#6B287C;
+    color:#14213d;
   }
 
+tbody tr:nth-child(even){background-color: #f2f2f2;}
+
+tbody tr:hover {background-color: #ddd;}
+
 th  {
-    border: 1px solid #dddddd;
+    border: 1px solid #b1b1b1;
     text-align: left;
     padding: 8px;
     color:black;;
   }
 
   .s-studienplan-th  {
-    border: 1px solid #dddddd;
+    border: 1px solid #b1b1b1;
     text-align: center;
     padding: 8px;
-    color: #6B287C;
+    color: #fca311;
   }
 
 table{
@@ -80,3 +78,88 @@ table{
     margin-top: 20px;
 }
 
+
+.s-closed {
+    color: #1e1141;
+    margin: auto;
+    margin-top: 10px;
+    width: fit-content;
+}
+
+.main{
+    max-width: 1200px;
+    margin: 5px auto;
+  }
+  
+  h1 {
+      font-size: 24px;
+      font-weight: 400;
+      text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    width: fit-content;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .cards_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .cards_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .cards_item {
+      width: 33.3333%;
+    }
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+    display: flex;
+    background: linear-gradient(to bottom left, #e5e5e5 40%, #d4d1d1 100%);
+    overflow: hidden;
+    transition: all 1s;
+  }
+
+  .card:hover {
+    transform: scale(1.1);
+    border-color: #fca311;
+  }
+  
+  .card_content {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    height: 100%;
+    align-items: flex-end;
+  }
+  
+  .card_title {
+    color: #14213d;
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    margin: 0px;
+    min-height: 90px;
+  }
+  
+  .card_text {
+    color: #14213d;
+    line-height: 1.5;
+    margin-bottom: 0;    
+    font-weight: 400;
+  }
